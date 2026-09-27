@@ -108,8 +108,8 @@ a:focus-visible {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 200px));
   justify-content: start;
-  gap: 40px 60px;
-  padding-left: 48px;
+  gap: 40px 500px;
+  padding-left: 50px;
   margin-top: 24px;
 }
 
