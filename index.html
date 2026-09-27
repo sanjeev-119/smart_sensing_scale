@@ -33,30 +33,28 @@
   <section id="overview">
     <h2>Project Overview</h2>
 
-    <h3>Executive Summary</h3>
+    <h3>Abstract</h3>
     <p>
-      [Replace with your executive summary. Explain what the device does, who it is
-      for, and the problem it solves — for example, how undetected pressure and
-      temperature changes in the feet of people with diabetic neuropathy can lead
-      to ulcers, and how a routine weigh-in on this scale is used to catch early
-      warning signs before that happens.]
+      Diabetic foot complication remain a leading cause of preventable 
+      hospitalization and lower extremity amputation, primarily due to the lack of early detection and monitoring of foot health.
+      Hence, this project aims to develop a smart sensing scale that integrates pressure and temperature sensor arrays to monitor foot health in diabetic patients.
+      The scale will provide real-time feedback on pressure distribution and temperature variations across different foot zones, 
+      enabling early detection of potential risks of DFU.
     </p>
     <p>
-      [Second paragraph: describe the system at a high level — the sensing
-      hardware built into the scale, how readings are processed, and how results
-      are delivered to the person using it or to a caregiver/clinician.]
+      The system integrates a force-sensitive resistor (FSR) array to map plantar pressure distribution,
+      thermal camera IR array (MLX90640) to detect zonal thermal asymmetry, 
+      all interfaced through a Rasberry Pi microcontroller. 
+      Acquired data is processed on-device using a threshold-based risk-scoring algorithm that flags peak pressure zones and temperature differentials
+      exceeding clinically significant limits, with results displayed instantly. 
+      Readings are additionally transmitted over Wi-Fi to a backend server, enabling historical trend analysis and remote visualization through a web dashboard.
     </p>
 
-    <h3>Summary of Requirements</h3>
+    <h3>Objectives</h3>
     <ul>
-      <li>Temperature sensing resolution of &plusmn;0.1&deg;C per sensing point</li>
-      <li>[Pressure sensing resolution — fill in target]</li>
-      <li>[Number of sensor points per foot — fill in]</li>
-      <li>[Time from weigh-in to result — fill in target]</li>
-      <li>[Data delivery method — e.g. companion app over Bluetooth]</li>
-      <li>Bilateral temperature difference alert threshold of 2.0&deg;C</li>
-      <li>[Total project/system cost budget — fill in]</li>
-      <li>[Power requirement — fill in]</li>
+      <li>To design and fabricate a scale-like platform integrating pressure and temperature sensor arrays for foot monitoring.</li>
+      <li>To develop a software for collecting, storing, analyzing, and visualizing the sensor data to identify pressure and temperature variations across different foot zones.</li>
+      
     </ul>
   </section>
 
@@ -67,17 +65,17 @@
     <div class="guides-grid">
 
       <div class="person-card">
-        <img src="assets/team/k_v_suresh_sir.jpeg" alt="[Guide Name]" class="person-card-photo">
+        <img src="assets/team/k_v_suresh_sir.jpeg" alt="Dr K V Suresh" class="person-card-photo">
         <h4 class="person-card-name">Dr K V Suresh</h4>
         <p class="person-card-role">Professor</p>
         <p class="person-card-dept">Electronics &amp; Communication Engineering</p>
       </div>
 
       <div class="person-card">
-        <img src="assets/team/sandesh_sir.jpeg" alt="[Guide Name]" class="person-card-photo">
+        <img src="assets/team/sandesh_sir.jpeg" alt="Sandesh G V" class="person-card-photo">
         <h4 class="person-card-name">Sandesh G V</h4>
         <p class="person-card-role">Founder / Software Developer</p>
-        <p class="person-card-dept">Nasken Health, Boston, United States</p>
+        <p class="person-card-dept">Nasken Health<br>Boston, United States</p>
       </div>
 
     </div>
