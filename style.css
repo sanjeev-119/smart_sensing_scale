@@ -51,45 +51,81 @@ a:focus-visible {
   outline-offset: 2px;
 }
 
-/* ---- Header / nav ---- */
-.site-header {
-  background: #14213d;
+/* ---- Header: two-tier (title banner + secondary nav bar) ---- */
+.header-top {
+  background: #8c1515;
   color: #ffffff;
-  padding: 10px 16px;
+  padding: 20px 32px;
+}
+
+.header-top-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.uni-name {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #ffffff;
+  font-size: 1.7rem;
+  margin: 0 0 6px 0;
+}
+
+.team-line {
+  margin: 0 0 4px 0;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.project-line {
+  margin: 0;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.header-bottom {
+  background: #eeeeee;
+  border-bottom: 1px solid #cccccc;
+}
+
+.header-bottom-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 10px 32px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 20px;
   flex-wrap: wrap;
 }
 
-.brand {
-  color: #ffffff;
+.home-link {
+  color: #333333;
   text-decoration: none;
-  font-weight: bold;
-  font-size: 0.95rem;
+  font-size: 1.2rem;
 }
 
 .site-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
+  gap: 20px;
 }
 
 .site-nav a {
-  color: #d7e0f0;
+  color: #222222;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
 }
 .site-nav a:hover {
   text-decoration: underline;
-  color: #ffffff;
 }
 
 .nav-toggle {
   display: none;
   background: none;
-  color: #ffffff;
-  border: 1px solid #ffffff;
+  color: #222222;
+  border: 1px solid #999999;
   padding: 4px 10px;
   cursor: pointer;
 }
@@ -108,8 +144,8 @@ a:focus-visible {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 200px));
   justify-content: start;
-  gap: 40px 500px;
-  padding-left: 50px;
+  gap: 40px 120px;
+  padding-left: 48px;
   margin-top: 24px;
 }
 
@@ -167,8 +203,7 @@ section p + p {
 
 /* ---- Responsive ---- */
 @media (max-width: 640px) {
-  .site-header {
-    flex-direction: column;
+  .header-bottom-inner {
     align-items: flex-start;
   }
   .nav-toggle {
@@ -179,6 +214,7 @@ section p + p {
     flex-direction: column;
     width: 100%;
     margin-top: 8px;
+    gap: 12px;
   }
   .site-nav.is-open {
     display: flex;
