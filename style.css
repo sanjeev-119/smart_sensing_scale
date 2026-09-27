@@ -97,9 +97,10 @@ a:focus-visible {
 /* ---- Team members: card grid ---- */
 .people-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 28px;
-  margin-top: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 200px));
+  justify-content: center;
+  gap: 40px 56px;
+  margin-top: 24px;
 }
 
 .person-card {
@@ -108,13 +109,14 @@ a:focus-visible {
 
 .person-card-photo {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
+  object-position: center 25%;
   border: 1px solid #cccccc;
   background: #eeeeee;
-  border-radius: 4px;
+  border-radius: 6px;
   display: block;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .person-card-name {
@@ -144,6 +146,7 @@ a:focus-visible {
 @media (max-width: 640px) {
   .people-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 32px 20px;
   }
 }
   border-top: 1px solid #cccccc;
