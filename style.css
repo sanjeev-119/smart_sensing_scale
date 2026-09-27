@@ -98,8 +98,8 @@ a:focus-visible {
 .people-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 200px));
-  justify-content: center;
-  gap: 40px 56px;
+  justify-content: space-between;
+  gap: 40px 24px;
   margin-top: 24px;
 }
 
