@@ -94,8 +94,58 @@ a:focus-visible {
   cursor: pointer;
 }
 
-/* ---- Team members ---- */
-.person {
+/* ---- Team members: card grid ---- */
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 28px;
+  margin-top: 20px;
+}
+
+.person-card {
+  text-align: center;
+}
+
+.person-card-photo {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: 1px solid #cccccc;
+  background: #eeeeee;
+  border-radius: 4px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.person-card-name {
+  margin: 0 0 4px 0;
+  font-size: 1rem;
+}
+
+.person-card-usn {
+  font-size: 0.85rem;
+  color: #555555;
+  margin: 0 0 4px 0;
+}
+
+.person-card-role {
+  font-weight: bold;
+  font-style: italic;
+  color: #333333;
+  margin: 0 0 4px 0;
+}
+
+.person-card-dept {
+  font-size: 0.85rem;
+  color: #555555;
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .people-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
   border-top: 1px solid #cccccc;
   padding-top: 16px;
   margin-top: 16px;
