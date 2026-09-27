@@ -143,49 +143,8 @@ a:focus-visible {
   margin: 0;
 }
 
-@media (max-width: 640px) {
-  .people-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px 20px;
-  }
-}
-  border-top: 1px solid #cccccc;
-  padding-top: 16px;
-  margin-top: 16px;
-}
-
-.person h4 {
-  margin: 0 0 4px 0;
-  font-size: 1.05rem;
-}
-
-.person-role {
-  font-weight: bold;
-  font-style: italic;
-  color: #333333;
-  margin: 0 0 4px 0;
-}
-
-.person-usn {
-  font-size: 0.85rem;
-  color: #555555;
-  margin: 0 0 8px 0;
-}
-
-.person-photo {
-  width: 110px;
-  height: 110px;
-  object-fit: cover;
-  float: left;
-  margin: 0 16px 8px 0;
-  border: 1px solid #999999;
-  background: #eeeeee;
-}
-
-.person--guide {
-  border-top: 1px solid #cccccc;
-  padding-top: 12px;
-  margin-top: 12px;
+.people-grid--guides {
+  justify-content: start;
 }
 
 /* ---- Lists ---- */
@@ -198,13 +157,6 @@ li {
 
 section p + p {
   margin-top: 4px;
-}
-
-/* clear floats at end of each person block */
-.person::after {
-  content: "";
-  display: table;
-  clear: both;
 }
 
 /* ---- Responsive ---- */
@@ -225,9 +177,8 @@ section p + p {
   .site-nav.is-open {
     display: flex;
   }
-  .person-photo {
-    float: none;
-    display: block;
-    margin-bottom: 12px;
+  .people-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 20px;
   }
 }
