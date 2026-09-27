@@ -95,11 +95,21 @@ a:focus-visible {
 }
 
 /* ---- Team members: card grid ---- */
-.people-grid {
+.team-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 200px));
   justify-content: space-between;
   gap: 40px 24px;
+  margin-top: 24px;
+}
+
+/* ---- Project guides: card grid (independent spacing from team-grid) ---- */
+.guides-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 200px));
+  justify-content: start;
+  gap: 40px 60px;
+  padding-left: 48px;
   margin-top: 24px;
 }
 
@@ -143,11 +153,6 @@ a:focus-visible {
   margin: 0;
 }
 
-.people-grid--guides {
-  justify-content: start;
-  padding-left: 48px;
-}
-
 /* ---- Lists ---- */
 ul {
   padding-left: 22px;
@@ -178,7 +183,8 @@ section p + p {
   .site-nav.is-open {
     display: flex;
   }
-  .people-grid {
+  .team-grid,
+  .guides-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 32px 20px;
   }
