@@ -110,6 +110,12 @@ a:focus-visible {
   font-weight: bold;
   font-style: italic;
   color: #333333;
+  margin: 0 0 4px 0;
+}
+
+.person-usn {
+  font-size: 0.85rem;
+  color: #555555;
   margin: 0 0 8px 0;
 }
 
