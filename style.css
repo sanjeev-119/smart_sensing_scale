@@ -145,6 +145,7 @@ a:focus-visible {
 
 .people-grid--guides {
   justify-content: start;
+  padding-left: 48px;
 }
 
 /* ---- Lists ---- */
