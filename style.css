@@ -1,0 +1,174 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1a1a1a;
+  background: #ffffff;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+h1, h2, h3, h4 {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #111111;
+}
+
+.page-title {
+  font-size: 1.6rem;
+  border-bottom: 2px solid #222222;
+  padding-bottom: 12px;
+  margin-top: 32px;
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin-top: 40px;
+  border-bottom: 1px solid #999999;
+  padding-bottom: 6px;
+}
+
+h3 {
+  font-size: 1.05rem;
+  margin-top: 24px;
+}
+
+a {
+  color: #0645ad;
+  text-decoration: underline;
+}
+a:hover {
+  color: #0b0080;
+}
+a:focus-visible {
+  outline: 2px solid #0645ad;
+  outline-offset: 2px;
+}
+
+/* ---- Header / nav ---- */
+.site-header {
+  background: #14213d;
+  color: #ffffff;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.brand {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.site-nav a {
+  color: #d7e0f0;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.site-nav a:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+/* ---- Team members ---- */
+.person {
+  border-top: 1px solid #cccccc;
+  padding-top: 16px;
+  margin-top: 16px;
+}
+
+.person h4 {
+  margin: 0 0 4px 0;
+  font-size: 1.05rem;
+}
+
+.person-role {
+  font-weight: bold;
+  font-style: italic;
+  color: #333333;
+  margin: 0 0 8px 0;
+}
+
+.person-photo {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  float: left;
+  margin: 0 16px 8px 0;
+  border: 1px solid #999999;
+  background: #eeeeee;
+}
+
+.person--guide {
+  border-top: 1px solid #cccccc;
+  padding-top: 12px;
+  margin-top: 12px;
+}
+
+/* ---- Lists ---- */
+ul {
+  padding-left: 22px;
+}
+li {
+  margin-bottom: 6px;
+}
+
+section p + p {
+  margin-top: 4px;
+}
+
+/* clear floats at end of each person block */
+.person::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 640px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-toggle {
+    display: inline-block;
+  }
+  .site-nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 8px;
+  }
+  .site-nav.is-open {
+    display: flex;
+  }
+  .person-photo {
+    float: none;
+    display: block;
+    margin-bottom: 12px;
+  }
+}
